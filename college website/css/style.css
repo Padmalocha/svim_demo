@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    /* Prevents horizontal overflow */
+}
+/* Top Contact Bar */
+.top-contact-bar {
+    position: sticky;
+    background-color: #2e7d32; /* Green background similar to the image */
+    color: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #1b5e20;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.top-contact-bar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.top-contact-bar a span {
+    margin-right: 5px;
+}
+
+.top-contact-bar a:hover {
+    color: #c8e6c9; /* Lighter green on hover for contrast */
+}
+
+.top-contact-bar a:last-child {
+    margin-right: 0;
+}
+
+/* Responsive Design for Top Contact Bar */
+@media (max-width: 768px) {
+    .top-contact-bar {
+        font-size: 12px;
+        padding: 3px 10px;
+        justify-content: space-between;
+    }
+
+    .top-contact-bar a {
+        margin: 0 5px;
+        padding: 3px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-contact-bar {
+        font-size: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-contact-bar a {
+        margin: 2px 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343d4e;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 0;
+    gap: 27px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    border-radius: 50%;
+    max-height: 100px;
+    max-width: 150px;
+    height: 98px;
+    width: 95px;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    height: auto;
+    width: 116px;
+    margin-top: 5px;
+    text-align: center;
+    position: relative;
+    margin-left: 10px;
+    background-color: #b6bcc7; 
+    border: 1px solid black;
+    border-radius: 10px;  
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    display: block;
+}
+
+.nav-links a.active {
+    background-color: #e0b270;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(27, 26, 26, 0.2);
+    z-index: 1;
+}
+
+.dropdown li {
+    margin: 2px;
+}
+
+.dropdown li a {
+    padding: 8px 12px;
+    color: black;
+}
+
+.nav-links li:hover .dropdown {
+    display: block;
+}
+
+.nav-links a:hover,
+.dropdown li a:hover {
+    background-color: #e3b161;
+    border-radius: 10px;
+   
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 10px;
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #4d4f45;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.swiper-slide h1 {
+    color: rgb(241, 235, 235);
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(87, 83, 83, 0.5);
+}
+
+.swiper-slide p {
+    color: rgb(165, 153, 153);
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.cta-btn {
+    background-color: #ff6200;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+css
+/* Recruiters Section */
+.recruiters {
+    padding: 40px 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.recruiters h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.recruiters-carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.recruiters-carousel .swiper-wrapper {
+    transition-timing-function: ease-out;
+}
+
+.recruiters-carousel .swiper-slide {
+    border: 2px solid;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px rgb(75, 72, 72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.recruiters-carousel .swiper-slide img {
+    max-height: 80px;
+    max-width: 140px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Responsive Design for Recruiters Section */
+@media (max-width: 1024px) {
+    .recruiters-carousel .swiper-slide {
+        width: 120px;
+    }
+
+    .recruiters-carousel .swiper-slide img {
+        max-height: 70px;
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .recruiters h2 {
+        font-size: 1.5rem;
+    }
+
+    .recruiters-carousel .swiper-slide {
+        width: 100px;
+    }
+
+    .recruiters-carousel .swiper-slide img {
+        max-height: 60px;
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recruiters {
+        padding: 20px 10px;
+    }
+
+    .recruiters h2 {
+        font-size: 1.2rem;
+    }
+
+    .recruiters-carousel .swiper-slide {
+        width: 80px;
+    }
+
+    .recruiters-carousel .swiper-slide img {
+        max-height: 50px;
+        max-width: 80px;
+    }
+}
+
+
+/* Footer */
+.footer {
+    background-color: #003087;
+    color: white;
+    margin-top: 50px;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.footer a {
+    color: #ff6200;
+    text-decoration: none;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+}
+
+.footer form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 60%;
+}
+
+.footer form button {
+    padding: 10px 20px;
+    background-color: #ff6200;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-links a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .swiper-slide h1 {
+        font-size: 2rem;
+    }
+
+    .swiper-slide p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-wrap: wrap;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #003087;
+        display: none;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown {
+        position: static;
+        background-color: #0040c1;
+        width: 100%;
+    }
+
+    .hero {
+        height: 250px;
+    }
+
+    .swiper-slide h1 {
+        font-size: 1.5rem;
+    }
+
+    .swiper-slide p {
+        font-size: 0.9rem;
+    }
+
+    .recruiters-carousel .swiper-slide {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        height: 200px;
+    }
+
+    .swiper-slide h1 {
+        font-size: 1.2rem;
+    }
+
+    .swiper-slide p {
+        font-size: 0.8rem;
+    }
+
+    .cta-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .recruiters-carousel .swiper-slide {
+        width: 100px;
+    }
+
+    .footer form input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer form button {
+        width: 100%;
+    }
+}
